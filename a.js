@@ -10,7 +10,7 @@ function docsifyMiniValine(hook, vm) {
         vm.config.MiniValine = vm.config.MiniValine || {}
         var options = Object.assign({
             el: '#minivcomments',
-            pathname: vm.config.MiniValine.docPath === 'full' ? location.pathname + location.hash.replace(/\?.+/, "") : location.hash.replace(/\?.+/, ""),
+            pathname: location.pathname + location.hash.replace(/\?.+/, ""),
         }, vm.config.MiniValine)
         new MiniValine(options)
     })
